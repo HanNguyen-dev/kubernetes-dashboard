@@ -121,6 +121,15 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ]
+            },
+            "development": {
+              "localize": false,
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "fr": {
+              "localize": ["fr"]
             }
           }
         },
@@ -180,6 +189,11 @@
           "options": {
             "browserTarget": "kubernetes-dashboard:esbuild",
             "port": 8080
+          },
+          "configurations": {
+            "fr": {
+              "browserTarget": "kubernetes-dashboard:build:development,fr"
+            }
           }
         },
         "extract-i18n-merge": {
